@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sevinchxon — Dasturchi / Developer</title>
+  <meta name="description" content="Sevinchxon — dasturchi portfolio sayti / developer portfolio">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Syne:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    /* Sahifa yuklanishidan oldin temani o'rnatish (miltillashni oldini oladi) */
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body id="top">
+
+  <header class="nav" id="nav">
+    <a class="logo" href="#top" aria-label="Sevinchxon">Sevinchxon<span>.dev</span></a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Menu">
+      <a href="#about" data-i18n="nav.about">Men haqimda</a>
+      <a href="#skills" data-i18n="nav.skills">Ko'nikmalar</a>
+      <a href="#projects" data-i18n="nav.projects">Loyihalar</a>
+      <a href="#journey" data-i18n="nav.journey">Yo'lim</a>
+      <a href="#contact" data-i18n="nav.contact">Aloqa</a>
+    </nav>
+
+    <div class="tools">
+      <button class="pill-btn" id="langBtn" type="button" aria-label="Til / Language">
+        <span data-lang-opt="uz">UZ</span><span data-lang-opt="en">EN</span>
+      </button>
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Dark / Light">
+        <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-text">
+        <p class="status"><span class="dot"></span><span data-i18n="hero.status">Yangi loyihalarga ochiqman</span></p>
+        <p class="hello" data-i18n="hero.hi">Salom, men</p>
+        <h1 class="hero-name">Sevinch<wbr>xon</h1>
+        <p class="hero-role" data-i18n="hero.role">Dasturchi. G'oyalarni ishlaydigan veb-sahifalarga aylantiraman.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#projects" data-i18n="hero.cta1">Loyihalarni ko'rish</a>
+          <a class="btn btn-ghost" href="#contact" data-i18n="hero.cta2">Bog'lanish</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="arch-wrap" id="tilt">
+          <div class="arch">
+            <img src="images/profile.png" alt="Sevinchxon" width="640" height="800">
+          </div>
+        </div>
+        <figure class="code-card" aria-label="code">
+          <div class="code-bar"><i></i><i></i><i></i><span>sevinchxon.js</span></div>
+          <pre><code id="code"></code><span class="caret"></span></pre>
+        </figure>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>HTML5</span><b>✦</b><span>CSS3</span><b>✦</b><span>JavaScript</span><b>✦</b><span>Responsive</span><b>✦</b><span>Git</span><b>✦</b><span>Figma</span><b>✦</b>
+        <span>HTML5</span><b>✦</b><span>CSS3</span><b>✦</b><span>JavaScript</span><b>✦</b><span>Responsive</span><b>✦</b><span>Git</span><b>✦</b><span>Figma</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <h2 class="section-title" data-i18n="about.title">Kod yozaman, ko'rinishiga ham e'tibor beraman.</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p data-i18n="about.p1">Men Sevinchxon, dasturchiman. Veb-sahifalarni tez, qulay va chiroyli qilishni yaxshi ko'raman: har bir tugma, har bir rang va har bir satr kod o'z o'rnida bo'lishi kerak.</p>
+          <p data-i18n="about.p2">Yangi texnologiyalarni o'rganish va ularni haqiqiy loyihalarda sinab ko'rish menga ayniqsa yoqadi.</p>
+        </div>
+        <dl class="facts">
+          <div><dt data-i18n="about.f1k">Kasb</dt><dd data-i18n="about.f1v">Dasturchi</dd></div>
+          <div><dt data-i18n="about.f2k">Yo'nalish</dt><dd data-i18n="about.f2v">Veb dasturlash</dd></div>
+          <div><dt data-i18n="about.f3k">Tillar</dt><dd data-i18n="about.f3v">O'zbek, English</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <h2 class="section-title" data-i18n="skills.title">Ish qurollarim</h2>
+      <div class="skills">
+        <div class="skill-group g1">
+          <h3 data-i18n="skills.g1">Frontend</h3>
+          <ul><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Responsive design</li></ul>
+        </div>
+        <div class="skill-group g2">
+          <h3 data-i18n="skills.g2">Asboblar</h3>
+          <ul><li>Git</li><li>GitHub</li><li>VS Code</li><li>Figma</li></ul>
+        </div>
+        <div class="skill-group g3">
+          <h3 data-i18n="skills.g3">O'rganmoqdaman</h3>
+          <ul><li>React</li><li>Node.js</li><li>TypeScript</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS (namuna matn: o'zingizning loyihalaringiz bilan almashtiring) -->
+    <section class="section" id="projects">
+      <h2 class="section-title" data-i18n="projects.title">Tanlangan loyihalar</h2>
+      <div class="projects">
+        <article class="project big">
+          <img src="images/project-1.svg" alt="" loading="lazy">
+          <div class="project-body">
+            <h3 data-i18n="projects.p1t">Shaxsiy portfolio</h3>
+            <p data-i18n="projects.p1d">Qorong'i va yorug' rejimli, ikki tilli, to'liq moslashuvchan sayt.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JS</li></ul>
+          </div>
+        </article>
+        <article class="project">
+          <img src="images/project-2.svg" alt="" loading="lazy">
+          <div class="project-body">
+            <h3 data-i18n="projects.p2t">Vazifalar ro'yxati</h3>
+            <p data-i18n="projects.p2d">Vazifalarni qo'shish, bajarilgan deb belgilash va saqlash.</p>
+            <ul class="tags"><li>JS</li><li>LocalStorage</li></ul>
+          </div>
+        </article>
+        <article class="project">
+          <img src="images/project-3.svg" alt="" loading="lazy">
+          <div class="project-body">
+            <h3 data-i18n="projects.p3t">Ob-havo paneli</h3>
+            <p data-i18n="projects.p3d">Shahar bo'yicha ob-havoni ko'rsatadigan sodda panel.</p>
+            <ul class="tags"><li>API</li><li>CSS</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section class="section" id="journey">
+      <h2 class="section-title" data-i18n="journey.title">Yo'lim</h2>
+      <ol class="timeline">
+        <li><h3 data-i18n="journey.t1">Boshlanish</h3><p data-i18n="journey.d1">Birinchi satr kodni yozdim va to'xtay olmadim.</p></li>
+        <li><h3 data-i18n="journey.t2">Amaliyot</h3><p data-i18n="journey.d2">HTML, CSS va JavaScript bilan birinchi loyihalarni yaratdim.</p></li>
+        <li><h3 data-i18n="journey.t3">Hozir</h3><p data-i18n="journey.d3">Portfolio ustida ishlayapman va yangi texnologiyalarni o'rganyapman.</p></li>
+      </ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <h2 class="section-title big" data-i18n="contact.title">Keling, birga biror narsa yarataylik.</h2>
+      <div class="contact-grid">
+        <p class="contact-lead" data-i18n="contact.lead">Loyiha g'oyangiz bormi yoki shunchaki salom aytmoqchimisiz? Yozing, javob beraman.</p>
+        <form class="form" id="contactForm">
+          <label><span data-i18n="contact.name">Ismingiz</span>
+            <input type="text" id="cName" required autocomplete="name">
+          </label>
+          <label><span data-i18n="contact.msg">Xabar</span>
+            <textarea id="cMsg" rows="4" required></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit" data-i18n="contact.send">Xat yozish</button>
+        </form>
+      </div>
+      <ul class="socials">
+        <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://t.me/" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><span id="year"></span> Sevinchxon. <span data-i18n="footer.text">Barcha huquqlar himoyalangan.</span></p>
+    <a href="#top" data-i18n="footer.top">Tepaga</a>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
